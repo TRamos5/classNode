@@ -73,6 +73,9 @@ app.get('/puppies', (req, res) =>{
 
 app.use(require('./routes/index'));
 app.use(require('./routes/puppies'));
+app.use(require('./routes/feedback'));
+app.use(require('./routes/api'));
+
 
 
 
