@@ -12,26 +12,20 @@
 </head>
   <body>
     <% include partials/nav.ejs %>
-    <container class="container"r>
-      <header class="row">
-        <img class="col-4" src="/images/puppies/<%= golden %> " alt="">
-        <img class="col-4" src="/images/puppies/<%= siberian %> " alt="">
-        <img class="col-4" src="/images/puppies/<%= german %> " alt="">
-      </header>
-      <div class="row">
-        <a class="col-4">Golden Retriever</a>
-        <a class="col-4">Siberian Husky</a>
-        <a class="col-4">German Shepherd</a>
-      </div>
-    </container>
-    <div>
-        <% for(i=0; i<allPhoto.length; i++){ %>
-          <img src="/images/puppies/<%= allPhoto[i] %>">
-          <%}%>
-     
-
+    <header>
+    <%= pageTitle %>
+    </header>
+    <div class="row">
+    <div class="col-12 offset-2">
+        <img src="/images/puppies/<%= german %> " alt="">
     </div>
-   <% include partials/footer.ejs %>
+    </div>
+    <div>
+        <%= summary %>
+    </div>
+    <br>
+    <% include partials/footer.ejs %>
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
