@@ -13,7 +13,7 @@ router.get('/puppies', (req, res) => {
         <li>
             <h2>${item.name}</h2>
             <img src="/images/puppies/${item.shortname}_tn.jpeg" alt="">
-            <p>${item.summary}</p>
+            <p>${item.description}</p>
         </li>
         `;
 
@@ -25,7 +25,26 @@ router.get('/puppies', (req, res) => {
     <ul>
         ${myHTML}
     </ul>
+    <link rel='stylesheet' href='./styles/style.css'>
     `)
+
+})
+
+router.get('/puppies/:puppyID', (req, res) => {
+
+    let dataFile = req.app.get("appData");
+    let myHTML;
+
+    let puppy = dataFile.puppies[req.params.puppyID];
+
+    res.send(`
+    
+        <h2>${puppy.name}</h2>
+        <img src="/images/puppies/${puppy.shortname}_tn.jpeg" alt="">
+        <p>${puppy.description}</p>
+    `)
+
+    
 
 })
 
