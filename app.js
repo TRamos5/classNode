@@ -16,7 +16,7 @@ app.get('/', (req, res) =>{
         puppyArray = puppyArray.concat(puppy.imgURL)
     })
 
-    console.log("pppy array" + puppyArray);
+    console.log("puppy array" + puppyArray);
 
     res.render('layout',{
         pageTitle: 'Digital Crafts',
