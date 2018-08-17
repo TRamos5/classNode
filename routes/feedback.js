@@ -1,12 +1,12 @@
-var express = require('exrpess');
-var route = express.Route();
+var express = require('express');
+var router = express.Router();
 
-router.get('', function(req, res){
+router.get('/feedback', function(req, res){
     res.render('feedback', {
-        pageTitle: 'feedback',
+        pageTitle: 'Feedback',
         pageID: 'feedback'
     })
 })
 
 
-module.exports = route;
+module.exports = router;
